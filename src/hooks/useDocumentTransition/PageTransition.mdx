@@ -1,0 +1,105 @@
+---
+name: usePageTransition
+menu: Hooks
+---
+
+import { Playground, Props } from "docz";
+import { useNavigate } from "react-router";
+import {
+  NoPageTransition,
+  PageTransitionCSS,
+  PageTransitionDOM,
+  PageTransitionFadeInFadeOut,
+  PageTransitionStatus,
+  PageTransitionTranslate,
+} from "./PageTransition/index";
+import { usePageTransition } from "./usePageTransition";
+
+# usePageTransition
+
+## Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi
+quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a
+diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor
+ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat
+mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id
+sem. Nam semper lacinia nibh, sit amet accumsan purus vestibulum eget.
+Suspendisse eu metus sit amet sapien vulputate dictum. Quisque non mollis sem,
+nec ultricies nulla. Morbi dignissim finibus lectus vitae volutpat. Etiam
+sollicitudin nisl ut magna congue, nec tempus est varius. Fusce nulla mauris,
+pulvinar ac nisl eget, bibendum lobortis lacus. Interdum et malesuada fames ac
+ante ipsum primis in faucibus. Integer condimentum sed mauris ac mollis.
+Phasellus id sapien metus.
+
+<a href="https://github.com/WICG/shared-element-transitions" target="_blank">Source: 
+Web Incubator CG / Shared Element Transitions</a>
+
+<Playground>
+  <PageTransitionStatus />
+</Playground>
+
+## No Transition
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
+quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
+diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
+ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
+mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
+sem.
+
+<Playground>
+  <NoPageTransition />
+</Playground>
+
+## Fade In / Fade Out
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
+quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
+diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
+ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
+mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
+sem.
+
+<Playground>
+  <PageTransitionFadeInFadeOut />
+</Playground>
+
+## Translate with pseudo-element selectors
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
+quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
+diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
+ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
+mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
+sem.
+
+<Playground>
+  <PageTransitionTranslate />
+</Playground>
+
+## Transition with CSS properties
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
+quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
+diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
+ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
+mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
+sem.
+
+<Playground>
+  <PageTransitionCSS />
+</Playground>
+
+## Transition with DOM manipulation
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
+quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
+diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
+ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
+mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
+sem.
+
+<Playground>
+  <PageTransitionDOM />
+</Playground>
