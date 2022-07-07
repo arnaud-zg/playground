@@ -19,21 +19,26 @@ import { usePageTransition } from "./usePageTransition";
 
 ## Introduction
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi
-quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a
-diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor
-ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat
-mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id
-sem. Nam semper lacinia nibh, sit amet accumsan purus vestibulum eget.
-Suspendisse eu metus sit amet sapien vulputate dictum. Quisque non mollis sem,
-nec ultricies nulla. Morbi dignissim finibus lectus vitae volutpat. Etiam
-sollicitudin nisl ut magna congue, nec tempus est varius. Fusce nulla mauris,
-pulvinar ac nisl eget, bibendum lobortis lacus. Interdum et malesuada fames ac
-ante ipsum primis in faucibus. Integer condimentum sed mauris ac mollis.
-Phasellus id sapien metus.
+Following the presentation of Jake Archibald on the Google I/O 2022, I was 
+really excited to document transition API. Unlike mobile application 
+development, creating a nice transition from one page to another implies to
+use an external library such as framer or have a in-depth knowledge about css 
+animation and keyframes.
 
-<a href="https://github.com/WICG/shared-element-transitions" target="_blank">Source: 
-Web Incubator CG / Shared Element Transitions</a>
+From what I have experimented, document transition API provides modularity on 
+the code. This means the animations are added to an application as a plugin and
+can be easily removed at any time. Moreove, it is very easy to use and have a 
+fade or zoom animation. And the icing on the cake, it's customizable with css
+animation and keyframes.
+
+- <a href="https://www.youtube.com/watch?v=JCJUPJ_zDQ4" target="_blank">Video: Google I/O Bringing page transitions to the web</a>
+- <a href="https://github.com/WICG/shared-element-transitions" target="_blank">Source: Web Incubator CG / Shared Element Transitions</a>
+
+## Transition Status
+
+Given that the page transition API is still in the experimental phase, to get 
+started with element transitions today, you need to enable the API via
+**chrome://flags/#document-transition**.
 
 <Playground>
   <PageTransitionStatus />
@@ -41,12 +46,7 @@ Web Incubator CG / Shared Element Transitions</a>
 
 ## No Transition
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
-quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
-diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
-ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
-mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
-sem.
+No transition this list of images.
 
 <Playground>
   <NoPageTransition />
@@ -54,12 +54,11 @@ sem.
 
 ## Fade In / Fade Out
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
-quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
-diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
-ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
-mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
-sem.
+The default transition is a cross-fade from the image list to the selected 
+image. The transition is made based on the "screenshot" made on the outgoing and 
+incoming pages. The outgoing elements animates from 
+`opacity: 1` to `opacity: 0`, whereas the incoming elements animates from 
+`opacity: 0` to `opacity: 1`, creating a cross-fade.
 
 <Playground>
   <PageTransitionFadeInFadeOut />
@@ -80,12 +79,13 @@ sem.
 
 ## Transition with CSS properties
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
-quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
-diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
-ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
-mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
-sem.
+
+So far, we've been able to animate the whole page, but state transitions 
+often need to animate things independently. To do this you can use the property
+`page-transition-tag`. On the same principle, the transition is made based on 
+the "screenshot" made on the outgoing and inconming element. You can see a 
+translate and zoom effect.
+
 
 <Playground>
   <PageTransitionCSS />
@@ -93,12 +93,10 @@ sem.
 
 ## Transition with DOM manipulation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
-quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
-diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
-ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
-mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
-sem.
+
+Another way to animate things independently is to dynamically set the value 
+on the `element.style.pageTransitionTag` with Javascript.
+
 
 <Playground>
   <PageTransitionDOM />
