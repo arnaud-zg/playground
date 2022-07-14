@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/arnaud-zg/playground/compare/v1.0.2...v1.0.3) (2022-07-14)
+
+
+### 🐛 Bug Fixes
+
+* **docs:** update README.md ([#10](https://github.com/arnaud-zg/playground/issues/10)) ([e1e84f8](https://github.com/arnaud-zg/playground/commit/e1e84f883ff6ddcc6c8b08611ea9bd0f6a60ba2f))
+* **docs:** update README.md ([#12](https://github.com/arnaud-zg/playground/issues/12)) ([770bf31](https://github.com/arnaud-zg/playground/commit/770bf31991031260a4001cba57d4d17d883f4985))
+
 ## [1.0.2](https://github.com/arnaud-zg/playground/compare/v1.0.1...v1.0.2) (2022-07-14)
 
 
