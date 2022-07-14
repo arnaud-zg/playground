@@ -1,7 +1,7 @@
 # Playground
 
 This project is a sandbox for experimental testing purpose, the goal is to have
-a tool to facilitate the development of a component, hooks, functions.
+a tool to facilitate the development of a components, hooks, functions.
 
 ## Setup
 
