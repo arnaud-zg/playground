@@ -66,12 +66,18 @@ incoming pages. The outgoing elements animates from
 
 ## Translate with pseudo-element selectors
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum, mi 
-quis rutrum lobortis, odio nisl suscipit libero, sit amet pretium est sem a 
-diam. Nullam egestas felis est, non aliquam felis blandit et. Sed maximus tortor 
-ac sem luctus, egestas lacinia justo interdum. Morbi sed augue mattis, volutpat 
-mi et, vehicula eros. Sed tortor urna, scelerisque sed dapibus eu, mollis id 
-sem.
+
+
+If you want to go further and use custom transition. Each element could be 
+targeted using CSS pseudo selectors, it means that all the animation are driven
+by CSS. Here are the pseudo selectors provided by Page Transition API.
+
+```
+::page-transition-container(root)
+::page-transition-image-wrapper(root)
+::page-transition-outgoing-image(root)
+::page-transition-incoming-image(root)
+```
 
 <Playground>
   <PageTransitionTranslate />
