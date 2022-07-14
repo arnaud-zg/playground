@@ -1,4 +1,12 @@
 export default {
   typescript: true,
-  public: '/public'
-}
+  menu: ["Welcome"],
+  ignore: [
+    "README.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+  ],
+  public: "/public",
+};
