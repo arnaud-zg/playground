@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/arnaud-zg/playground/compare/v1.0.0...v1.0.1) (2022-07-14)
+
+
+### 🐛 Bug Fixes
+
+* define subpath base url ([#4](https://github.com/arnaud-zg/playground/issues/4)) ([fcc7232](https://github.com/arnaud-zg/playground/commit/fcc72323c4f83002e220ab383b094df88a41328b))
+
 ## 1.0.0 (2022-07-14)
 
 
