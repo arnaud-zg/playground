@@ -1,5 +1,6 @@
 export default {
   typescript: true,
+  base: '/playground/',
   menu: ["Welcome"],
   ignore: [
     "README.md",
