@@ -9,12 +9,12 @@ export interface ImageProps {
 const getPageTransitionTag = ({ pageTransitionTag }: ImageProps) =>
   pageTransitionTag && `
   page-transition-tag: ${pageTransitionTag};
+  contain: paint;
 `;
 
 
 const ImageStyled = styled("img")<ImageProps>`
   ${getPageTransitionTag}
-  contain: paint;
   object-fit: cover;
   height: 100%;
   width: 100%;

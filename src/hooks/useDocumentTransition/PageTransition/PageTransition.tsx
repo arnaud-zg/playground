@@ -1,8 +1,10 @@
+import { css, Global } from "@emotion/react";
 import React, { useState } from "react";
 import { Alert } from "../../../components/Alert";
 import { usePageTransition } from "../usePageTransition";
 import { Container } from "./Container";
 import { Item } from "./Item";
+import { ItemContainer } from "./ItemContainer";
 import { ItemList, ITEM_LIST } from "./ItemList";
 
 export const PageTransitionStatus = () => {
@@ -31,14 +33,20 @@ export const NoPageTransition = () => {
 
   return (
     <Container>
-      {!selectedItem && <ItemList onAction={onAction} />}
+      {!selectedItem && (
+        <ItemContainer>
+          <ItemList onAction={onAction} />
+        </ItemContainer>
+      )}
       {itemId && selectedItem && (
-        <Item
-          itemId={itemId}
-          onAction={onReset}
-          scale="big"
-          src={selectedItem.src}
-        />
+        <ItemContainer>
+          <Item
+            itemId={itemId}
+            onAction={onReset}
+            scale="big"
+            src={selectedItem.src}
+          />
+        </ItemContainer>
       )}
     </Container>
   );
@@ -65,21 +73,89 @@ export const PageTransitionFadeInFadeOut = () => {
 
   return (
     <Container>
-      {!selectedItem && <ItemList onAction={onAction} />}
+      {!selectedItem && (
+        <ItemContainer>
+          <ItemList onAction={onAction} />
+        </ItemContainer>
+      )}
       {itemId && selectedItem && (
-        <Item
-          itemId={itemId}
-          onAction={onReset}
-          scale="big"
-          src={selectedItem.src}
-        />
+        <ItemContainer>
+          <Item
+            itemId={itemId}
+            onAction={onReset}
+            scale="big"
+            src={selectedItem.src}
+          />
+        </ItemContainer>
       )}
     </Container>
   );
 };
 
 export const PageTransitionTranslate = () => {
-  return null;
+  const [itemId, setItemId] = useState<number>();
+  const { startTransition } = usePageTransition();
+  const onAction = (nextItemId: number) => {
+    startTransition({
+      updateDOM: () => {
+        setItemId(nextItemId);
+      },
+    });
+  };
+  const onReset = () => {
+    startTransition({
+      updateDOM: () => {
+        setItemId(undefined);
+      },
+    });
+  };
+  const pageId = "page-transition-translate";
+  const isItemSelected = itemId !== undefined;
+  const selectedItem = ITEM_LIST.find(({ id }) => id === itemId);
+
+  return (
+    <>
+      <Global
+        styles={css`
+          @keyframes slide-to-top {
+            to {
+              opacity: 0;
+              transform: translateY(-100%);
+            }
+          }
+
+          ::page-transition-image-wrapper(${pageId}) {
+            overflow: hidden;
+          }
+
+          ::page-transition-outgoing-image(${pageId}) {
+            animation: 600ms ease-out both slide-to-top;
+          }
+
+          ::page-transition-incoming-image(${pageId}) {
+            animation: none;
+          }
+        `}
+      />
+      <Container>
+        {!isItemSelected && (
+          <ItemContainer pageTransitionTag={pageId}>
+            <ItemList onAction={onAction} />
+          </ItemContainer>
+        )}
+        {isItemSelected && (
+          <ItemContainer pageTransitionTag={pageId}>
+            <Item
+              itemId={itemId}
+              onAction={onReset}
+              scale="big"
+              src={selectedItem!.src}
+            />
+          </ItemContainer>
+        )}
+      </Container>
+    </>
+  );
 };
 
 export const PageTransitionCSS = () => {
@@ -106,19 +182,23 @@ export const PageTransitionCSS = () => {
   return (
     <Container>
       {!isItemSelected && (
-        <ItemList
-          onAction={onAction}
-          getPageTransitionTag={({ itemId }) => `${pageId}-item-${itemId}`}
-        />
+        <ItemContainer>
+          <ItemList
+            onAction={onAction}
+            getPageTransitionTag={({ itemId }) => `${pageId}-item-${itemId}`}
+          />
+        </ItemContainer>
       )}
       {isItemSelected && (
-        <Item
-          itemId={itemId}
-          onAction={onReset}
-          scale="big"
-          pageTransitionTag={`${pageId}-item-${itemId}`}
-          src={selectedItem!.src}
-        />
+        <ItemContainer>
+          <Item
+            itemId={itemId}
+            onAction={onReset}
+            scale="big"
+            pageTransitionTag={`${pageId}-item-${itemId}`}
+            src={selectedItem!.src}
+          />
+        </ItemContainer>
       )}
     </Container>
   );
@@ -146,19 +226,28 @@ export const PageTransitionDOM = () => {
       },
     });
   };
+  const isItemSelected = itemId !== undefined;
   const selectedItem = ITEM_LIST.find(({ id }) => id === itemId);
+
+  console.log(`${pageId}-item-${itemId}`)
 
   return (
     <Container>
-      {!selectedItem && <ItemList onAction={onAction} />}
-      {itemId && selectedItem && (
-        <Item
-          itemId={itemId}
-          onAction={onReset}
-          pageTransitionTag={`${pageId}-item-${itemId}`}
-          scale="big"
-          src={selectedItem.src}
-        />
+      {!selectedItem && (
+        <ItemContainer>
+          <ItemList onAction={onAction} />
+        </ItemContainer>
+      )}
+      {isItemSelected && (
+        <ItemContainer>
+          <Item
+            itemId={itemId}
+            onAction={onReset}
+            pageTransitionTag={`${pageId}-item-${itemId}`}
+            scale="big"
+            src={selectedItem!.src}
+          />
+        </ItemContainer>
       )}
     </Container>
   );

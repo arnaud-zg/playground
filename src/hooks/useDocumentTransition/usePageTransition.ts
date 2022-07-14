@@ -26,6 +26,7 @@ export const usePageTransition = () => {
 
     if (transitionTag) {
       const { sourceElement, pageTransitionTag } = transitionTag;
+      sourceElement.style.contain = "paint";
       sourceElement.style.pageTransitionTag = pageTransitionTag;
     }
 
@@ -34,12 +35,16 @@ export const usePageTransition = () => {
 
     if (transitionTag) {
       const { sourceElement } = transitionTag;
+      sourceElement.style.contain = "";
       sourceElement.style.pageTransitionTag = "";
     }
   };
 
-  return useMemo(() => ({
-    isEnabled,
-    startTransition,
-  }), []);
+  return useMemo(
+    () => ({
+      isEnabled,
+      startTransition,
+    }),
+    []
+  );
 };
