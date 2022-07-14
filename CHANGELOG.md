@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/arnaud-zg/playground/compare/v1.0.1...v1.0.2) (2022-07-14)
+
+
+### 🐛 Bug Fixes
+
+* **image:** load the images under a sub-path ([#6](https://github.com/arnaud-zg/playground/issues/6)) ([1d4dfe1](https://github.com/arnaud-zg/playground/commit/1d4dfe18f5be8ecda72e8f690984388c63802316))
+
 ## [1.0.1](https://github.com/arnaud-zg/playground/compare/v1.0.0...v1.0.1) (2022-07-14)
 
 
