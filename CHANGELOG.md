@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/arnaud-zg/playground/compare/v1.0.3...v1.0.4) (2022-07-15)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update react monorepo to v16.14.0 ([#19](https://github.com/arnaud-zg/playground/issues/19)) ([7aec915](https://github.com/arnaud-zg/playground/commit/7aec9151dbcefae51cd0ad3330d07813b4d4a1a0))
+
 ## [1.0.3](https://github.com/arnaud-zg/playground/compare/v1.0.2...v1.0.3) (2022-07-14)
 
 
