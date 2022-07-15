@@ -9,9 +9,9 @@
     "start": "npx serve .docz/dist"
   },
   "dependencies": {
-    "@emotion/core": "10.3.1",
-    "@emotion/styled": "10.3.0",
-    "@emotion/styled-base": "10.3.0",
+    "@emotion/core": "11.0.0",
+    "@emotion/styled": "11.9.3",
+    "@emotion/styled-base": "11.0.0",
     "docz": "latest",
     "react": "16.14.0",
     "react-dom": "16.14.0",
