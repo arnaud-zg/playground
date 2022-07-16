@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/arnaud-zg/playground/compare/v1.0.4...v1.0.5) (2022-07-16)
+
+
+### 🐛 Bug Fixes
+
+* adding ref component ([#27](https://github.com/arnaud-zg/playground/issues/27)) ([ac7c635](https://github.com/arnaud-zg/playground/commit/ac7c63574a2501b04e7b89d0495cbb3a5a9f94ad))
+
 ## [1.0.4](https://github.com/arnaud-zg/playground/compare/v1.0.3...v1.0.4) (2022-07-15)
 
 
