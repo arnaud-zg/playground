@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/arnaud-zg/playground/compare/v1.0.5...v1.0.6) (2022-07-24)
+
+
+### 🐛 Bug Fixes
+
+* **docs:** adding a menu for animations ([#31](https://github.com/arnaud-zg/playground/issues/31)) ([2b918b5](https://github.com/arnaud-zg/playground/commit/2b918b54799582a97ae11861d91abc8288d6b389))
+
 ## [1.0.5](https://github.com/arnaud-zg/playground/compare/v1.0.4...v1.0.5) (2022-07-16)
 
 
