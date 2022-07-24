@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React, { FC } from "react";
-import { Image } from "../../../components/Image";
+import { Image } from "../../components/Image";
 
 export type OnAction = (itemId: number, element: HTMLElement) => void;
 
