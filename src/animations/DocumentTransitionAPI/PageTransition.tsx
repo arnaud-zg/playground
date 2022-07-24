@@ -1,7 +1,7 @@
 import { css, Global } from "@emotion/react";
 import React, { useState } from "react";
-import { Alert } from "../../../components/Alert";
-import { usePageTransition } from "../usePageTransition";
+import { Alert } from "../../components/Alert";
+import { usePageTransition } from "../../hooks/useDocumentTransition";
 import { Container } from "./Container";
 import { Item } from "./Item";
 import { ItemContainer } from "./ItemContainer";
