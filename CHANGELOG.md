@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/arnaud-zg/playground/compare/v1.0.8...v1.0.9) (2022-10-09)
+
+
+### 🐛 Bug Fixes
+
+* **deps:** update dependency react-router to v6.4.2 ([#43](https://github.com/arnaud-zg/playground/issues/43)) ([1b55ad7](https://github.com/arnaud-zg/playground/commit/1b55ad7e89b9acc54fe258b0994b83db5cbb1302))
+
 ## [1.0.8](https://github.com/arnaud-zg/playground/compare/v1.0.7...v1.0.8) (2022-09-24)
 
 
