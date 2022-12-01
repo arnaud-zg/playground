@@ -15,7 +15,7 @@
     "docz": "latest",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-router": "6.4.3"
+    "react-router": "6.4.4"
   },
   "devDependencies": {
     "@types/react": "16.14.34",
